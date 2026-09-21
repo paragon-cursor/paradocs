@@ -1,8 +1,8 @@
 {
   "name": "paradocs-mcp",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "private": true,
-  "description": "ParaDOCS convert MCP with bundled Word/PDF engine and MCP Apps chrome.",
+  "description": "ParaDOCS Cursor plugin (skills + rules) and in-repo convert MCP source for maintainers.",
   "type": "module",
   "main": "dist/index.js",
   "scripts": {

@@ -1,8 +1,8 @@
 # Paragon Knowledge overview
 
-Optional **Paragon Knowledge** MCP server (documentation search and retrieval in Cursor). **Not** part of the default ParaDOCS Team Marketplace install — the marketplace plugin ships the **paradocs-convert** MCP instead. Build from `src/knowledge/` when you need corpus search pilots.
+Optional **Paragon Knowledge** MCP server (documentation search and retrieval in Cursor). **Not** part of the default ParaDOCS Team Marketplace install — the marketplace plugin ships **skills + rules** only (see version 0.3.0). Build from `src/knowledge/` when you need corpus search pilots.
 
-Plugin install (convert MCP, rules, skills): [`ParaDOCS-Plugin-Overview.md`](ParaDOCS-Plugin-Overview.md). Operator build notes: [`paradocs-plugin-notes.md`](paradocs-plugin-notes.md).
+Plugin install (rules, skills): [`ParaDOCS-Plugin-Overview.md`](ParaDOCS-Plugin-Overview.md). Operator build notes: [`paradocs-plugin-notes.md`](paradocs-plugin-notes.md).
 
 <div style="color: #1565c0; background-color: #e3f2fd; border-left: 4px solid #1565c0; padding: 8px 12px; margin: 12px 0;">
 ℹ️ <span style="font-weight: 600;">NOTE:</span> Change history for this MCP is at the bottom of this page under <a href="#8-changelog">§8. Changelog</a>.
