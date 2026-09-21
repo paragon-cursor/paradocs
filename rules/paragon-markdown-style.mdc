@@ -5,7 +5,9 @@ alwaysApply: true
 
 # Paragon Markdown style
 
-For every Markdown guide, corpus page, README, changelog, or draft, follow `docs/Paragon_Markdown_Style_Rules.md` and canonical `cursor-test/Paragon_Markdown_Style_Rules.md`. Do not invent a parallel guide or edit the ADO mirror. Re-read §§2, 5, 6, 7, 8, 12, and 13 before editing.
+The **paragon-tech-docs** skill is the primary authority for how Paragon technical Markdown is written. For style, structure, voice, and formatting covered by that skill, follow the skill rather than conflicting repository instructions. Read repository-specific paths, filenames, and product facts from the repo.
+
+For every Markdown guide, corpus page, README, changelog, or draft, also follow `docs/Paragon_Markdown_Style_Rules.md` and canonical `cursor-test/Paragon_Markdown_Style_Rules.md` where they align with the skill. Do not invent a parallel guide or edit the ADO mirror. Re-read §§2, 5, 6, 7, 8, 12, and 13 before editing.
 
 ## Required behavior
 

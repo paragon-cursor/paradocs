@@ -1,8 +1,8 @@
 {
   "name": "paradocs",
   "displayName": "ParaDOCS",
-  "version": "0.2.1",
-  "description": "Convert Word/PDF to Markdown in Cursor with bundled paradocs-convert MCP, rules, and paragon-tech-docs skill. Prerequisites: signed into Paragon team with Team Marketplace access; Python 3.10+ with venv; network on first convert only (PyPI for .paradocs-venv). Optional: Configure PARADOCS_DEFAULT_OUTPUT_DIR. If Python is missing or too old, install 3.10+ and reopen Cursor; Linux needs python3-venv; allow PyPI once if pip fails; enable ParaDOCS from Team Marketplace, Reload Window, check paradocs-convert Connected. Engine is bundled; do not install paradocs.py separately.",
+  "version": "0.3.0",
+  "description": "ParaDOCS is skills and rules for Paragon technical Markdown authoring in Cursor. The paragon-tech-docs skill is the primary way to write Paragon technical documentation; bundled rules reinforce structure, style, and quality. Prerequisites: signed into the Paragon team with Team Marketplace access. Enable ParaDOCS from Team Marketplace and choose Reload Window. Convert MCP may return in a later release.",
   "author": {
     "name": "Paragon",
     "email": "gareth.howells@paragon-cc.co.uk"
@@ -14,25 +14,10 @@
     "paradocs",
     "docs",
     "markdown",
-    "convert",
-    "docx",
-    "pdf",
     "technical-writing",
-    "mcp",
     "cursor"
   ],
   "license": "UNLICENSED",
   "skills": "./skills/",
-  "rules": "./rules/",
-  "mcpServers": "./mcp.json",
-  "variables": {
-    "type": "object",
-    "properties": {
-      "PARADOCS_DEFAULT_OUTPUT_DIR": {
-        "type": "string",
-        "title": "Default Markdown output folder (optional)",
-        "description": "When convert tools omit outputPath/outputDir, write Markdown under this folder. Leave blank to write beside each source file."
-      }
-    }
-  }
+  "rules": "./rules/"
 }

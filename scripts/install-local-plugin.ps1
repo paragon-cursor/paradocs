@@ -40,7 +40,6 @@ $include = @(
   "ui",
   "engine",
   "dist",
-  "mcp.json",
   "package.json",
   "package-lock.json",
   "tsconfig.json",
@@ -84,18 +83,11 @@ try {
   Pop-Location
 }
 
-# Ensure MCP launcher is present (plugin MCP cwd is the workspace, not plugin root).
-$launcher = Join-Path $linkPath "scripts\run-mcp.cmd"
-if (-not (Test-Path $launcher)) {
-  throw "Missing MCP launcher after copy: $launcher"
-}
-
 Write-Host "Installed local plugin (copy):"
 Write-Host "  $linkPath"
 Write-Host "  (source repo: $repoRoot)"
-Write-Host "  MCP launcher: $launcher"
 Write-Host ""
 Write-Host "Next:"
-Write-Host "  1. Reload Window / toggle plugin MCP, confirm Connected."
+Write-Host "  1. Reload Window so ParaDOCS rules and the paragon-tech-docs skill load."
 Write-Host "  2. Keep any User MCP 'paragon-knowledge' / old 'paradocs' / 'paragon-docs' entry disabled to avoid duplicates."
 

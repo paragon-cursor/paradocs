@@ -5,26 +5,22 @@
     "email": "gareth.howells@paragon-cc.co.uk"
   },
   "metadata": {
-    "description": "Convert Word/PDF to Markdown in Cursor with bundled paradocs-convert MCP, rules, and paragon-tech-docs skill. Prerequisites: Paragon team sign-in with Team Marketplace access; Python 3.10+ with venv; network on first convert only (PyPI). Optional: PARADOCS_DEFAULT_OUTPUT_DIR. Remediation: install Python 3.10+, reopen Cursor; Linux python3-venv; allow PyPI once if pip fails; enable from Team Marketplace, Reload Window, check paradocs-convert Connected. No separate paradocs.py install.",
-    "version": "0.2.1"
+    "description": "ParaDOCS is skills and rules for Paragon technical Markdown authoring in Cursor. The paragon-tech-docs skill is the primary way to write Paragon technical documentation; bundled rules reinforce structure, style, and quality. Prerequisites: Paragon team sign-in with Team Marketplace access. Enable from Team Marketplace and Reload Window. Convert MCP may return in a later release.",
+    "version": "0.3.0"
   },
   "plugins": [
     {
       "name": "paradocs",
       "source": "./",
-      "description": "Convert Word/PDF to Markdown in Cursor with bundled paradocs-convert MCP, rules, and paragon-tech-docs skill. Prerequisites: signed into Paragon team with Team Marketplace access; Python 3.10+ with venv; network on first convert only (PyPI for .paradocs-venv). Optional: Configure PARADOCS_DEFAULT_OUTPUT_DIR. If Python is missing or too old, install 3.10+ and reopen Cursor; Linux needs python3-venv; allow PyPI once if pip fails; enable ParaDOCS from Team Marketplace, Reload Window, check paradocs-convert Connected. Engine is bundled; do not install paradocs.py separately.",
-      "version": "0.2.1",
+      "description": "ParaDOCS is skills and rules for Paragon technical Markdown authoring in Cursor. The paragon-tech-docs skill is the primary way to write Paragon technical documentation; bundled rules reinforce structure, style, and quality. Prerequisites: signed into the Paragon team with Team Marketplace access. Enable ParaDOCS from Team Marketplace and choose Reload Window. Convert MCP may return in a later release.",
+      "version": "0.3.0",
       "logo": "assets/logo.png",
       "keywords": [
         "paragon",
         "paradocs",
         "docs",
         "markdown",
-        "convert",
-        "docx",
-        "pdf",
         "technical-writing",
-        "mcp",
         "cursor"
       ]
     }

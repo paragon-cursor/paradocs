@@ -13,7 +13,7 @@ Use this skill for technical documentation. Do not use it for marketing campaign
 2. Match the local heading depth, link style, filenames, and image paths.
 3. Check code or source documentation before naming APIs, flags, commands, versions, or UI.
 4. Ask when a fact cannot be verified. Do not invent behaviour or links.
-5. If repository instructions conflict with this skill, follow the more specific repository instruction.
+5. This skill is the **primary** way to write Paragon technical Markdown. For style, structure, voice, and formatting covered here, follow this skill rather than conflicting repository instructions. Read repository-specific paths, filenames, product facts, and verified behaviour from the repo; do not defer authoring rules to conflicting repo guidance.
 
 ## Ask before splitting a large topic
 
