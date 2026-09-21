@@ -1,5 +1,5 @@
 ---
-description: Use "please" when telling users not to self-serve MCP, plugin, or security workarounds
+description: Use "please" when telling users not to self-serve unapproved plugins or security workarounds
 alwaysApply: false
 globs:
   - user-guide/**/*.md
@@ -8,12 +8,12 @@ globs:
 
 # Polite user prohibitions
 
-When instructing **users** not to install unapproved MCP servers or plugins, add unapproved entries in `mcp.json`, or bypass the **Team Marketplace**, lead with **Please**.
+When instructing **users** not to install unapproved plugins, add unapproved marketplace entries, or bypass the **Team Marketplace**, lead with **Please**.
 
 Examples:
 
-- *Please do not install unapproved servers yourself.*
-- *Please do not install or call external MCP servers via Git or local commands.*
+- *Please do not install unapproved plugins yourself.*
+- *Please use the Team Marketplace or an admin-approved configuration instead of local workarounds.*
 
 ## Applies to
 

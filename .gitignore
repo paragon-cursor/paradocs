@@ -1,5 +1,3 @@
-node_modules/
-# dist/ is committed for Team Marketplace installs (bundled MCP + MCP Apps UI).
 .env
 .env.*
 *.log
@@ -7,12 +5,3 @@ node_modules/
 Thumbs.db
 .vscode/
 .idea/
-
-# Corpus Markdown lives in Technical Documentation (`corpus/`). Do not store
-# ripped trees under external/ in this package.
-external/tech-arch/
-external/abbey-view/
-scripts/__pycache__/
-**/*.pyc
-.paradocs-venv/
-.paradocs-jobs/

@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" role="img" aria-label="ParaDOCS">
-  <!-- Square MCP / plugin mark (Pantone 3025 C). Wordmarks stay in PNG assets for Apps panels. -->
+  <!-- Square ParaDOCS plugin mark (Pantone 3025 C). -->
   <rect width="128" height="128" rx="28" fill="#004F71"/>
   <g fill="#FFFFFF">
     <!-- Stylised globe O (banded) -->
