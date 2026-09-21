@@ -2,7 +2,7 @@
 
 ParaDOCS is a Cursor plugin for Paragon technical Markdown authoring across teams. It ships the **paragon-tech-docs** skill as the primary way to write Paragon technical documentation, plus thin rules that reinforce structure, voice, and quality.
 
-Repository: [github.com/paragon-cursor/paradocs](https://github.com/paragon-cursor/paradocs)
+Canonical source: [GitLab `cursor-test` / `paradocs/`](https://gitlab.com/gareth.howells778/cursor-test/-/tree/main/paradocs). Team Marketplace distribution: [github.com/paragon-cursor/paradocs](https://github.com/paragon-cursor/paradocs).
 
 ## What you get
 
@@ -38,7 +38,9 @@ Repository: [github.com/paragon-cursor/paradocs](https://github.com/paragon-curs
 
 ## Maintainers
 
-To refresh the bundled copy of `docs/Paragon_Markdown_Style_Rules.md` from the canonical `cursor-test` source:
+Edit this plugin in GitLab `cursor-test` under `paradocs/`. GitLab CI publishes to GitHub for the Team Marketplace (see `MIRROR.md` in the GitLab tree).
+
+To refresh the bundled copy of `docs/Paragon_Markdown_Style_Rules.md` from the repo-root style guide in `cursor-test`:
 
 ```bash
 python scripts/sync_paragon_markdown_style.py
