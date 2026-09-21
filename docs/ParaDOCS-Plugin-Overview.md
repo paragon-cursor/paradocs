@@ -8,9 +8,9 @@ ParaDOCS is a Cursor plugin for Paragon technical Markdown authoring across team
 
 ## Included
 
-- **`skills/paragon-tech-docs/`** .  primary skill for guided technical documentation authoring: decide the audience before drafting, name the reader and outcome in **Overview**, published Paragon tone of voice, numbered procedures, UK English, and security-aware examples.
-- **`rules/`** .  thin seatbelts for Markdown style and stale-content trims; path-scoped rules where a guide needs them (for example polite user prohibitions in user/admin guides).
-- **`.cursor-plugin/`** manifests and **`assets/logo.png`**.
+- **`skills/paragon-tech-docs/`** — primary skill for guided technical documentation authoring: decide the audience before drafting, name the reader and outcome in **Overview**, published Paragon tone of voice, numbered procedures, UK English, and security-aware examples.
+- **`rules/`** — thin seatbelts for Markdown style and stale-content trims; path-scoped rules where a guide needs them (for example polite user prohibitions in user/admin guides).
+- **`.cursor-plugin/`** manifests and **`assets/avatar.png`**.
 
 ## Install from the Team Marketplace
 
@@ -18,23 +18,31 @@ ParaDOCS is a Cursor plugin for Paragon technical Markdown authoring across team
 2. Add or select the Paragon marketplace sourced from `https://github.com/paragon-cursor/paradocs`.
 3. Find **ParaDOCS** and enable it for yourself or **Everyone** in the Paragon team.
 4. Choose **Reload Window** so rules and the skill load.
-5. Ask the agent to draft or edit technical documentation .  the **paragon-tech-docs** skill applies when the task matches its description.
+5. Ask the agent to draft or edit technical documentation — the **paragon-tech-docs** skill applies when the task matches its description.
 
 ## Authoring workflow
 
 Use **paragon-tech-docs** as the primary authority for how Paragon technical Markdown is written: audience, voice, structure, procedures, links, and security. Use the bundled rules for always-on reinforcement (style pointer, stale-content trims) when creating or reviewing documentation.
 
-## Maintainer-only code (not in marketplace install)
-
-The repository retains convert MCP source under `engine/`, `src/convert/`, and prebuilt `dist/` for maintainers and future releases. It is **not** registered by the Team Marketplace plugin.
-
-An optional **Paragon Knowledge** read/search MCP (`src/knowledge/`, build with `npm run build:server:knowledge`) also remains in-repo for separate pilots. It is **not** registered by the Team Marketplace plugin and requires corpus path configuration. See [Paragon-Knowledge-MCP-Overview.md](Paragon-Knowledge-MCP-Overview.md).
-
 ## Maintenance
 
-Keep `.cursor-plugin/plugin.json`, `.cursor-plugin/marketplace.json`, and this overview aligned. Plugin/marketplace description fields are pending final product-owner copy for 0.4.0.
+Keep `.cursor-plugin/plugin.json`, `.cursor-plugin/marketplace.json`, and this overview aligned when releasing a new plugin version.
+
+To sync the bundled style guide from `cursor-test`:
+
+```bash
+python scripts/sync_paragon_markdown_style.py
+```
+
+For local testing without the Team Marketplace, run `scripts/install-local-plugin.ps1` (Windows) to copy the plugin payload into `~/.cursor/plugins/local/paradocs`.
 
 ## Changelog
+
+### 0.4.3
+
+- Removed all MCP server, convert engine, and maintainer MCP config from the repository.
+- Team Marketplace package is **skills + rules** only; no Node build or bundled servers in-repo.
+- README and this overview rewritten for the authoring-only plugin.
 
 ### 0.4.0
 
@@ -43,20 +51,14 @@ Keep `.cursor-plugin/plugin.json`, `.cursor-plugin/marketplace.json`, and this o
 - **polite-user-prohibitions** scoped to `user-guide/` and `admin-guide/` paths only (not global).
 - **trim-stale-docs** stale rule references removed.
 - **paragon-markdown-style** thinned; skill remains primary authority.
-- Version bump to 0.4.0; marketplace description pending final copy.
+- Version bump to 0.4.0.
 
 ### 0.3.0
 
-- Team Marketplace install is **skills + rules** only; convert MCP unwired from plugin manifest.
+- Team Marketplace install is **skills + rules** only.
 - **paragon-tech-docs** positioned as the primary way to write Paragon technical Markdown.
 - Removed Python, venv, PyPI, and MCP Connected prerequisites from install surfaces.
 
 ### 0.2.1
 
 - Document install prerequisites and remediation in plugin manifests, marketplace metadata, and this overview.
-
-### 0.2.0
-
-- Ship bundled **paradocs-convert** MCP with Word/PDF → Markdown engine, ripping profiles, and MCP Apps chrome.
-- Register MCP in plugin manifest; optional `PARADOCS_DEFAULT_OUTPUT_DIR` only.
-- Paragon Knowledge search remains in-repo as an optional build, not part of the default marketplace install.

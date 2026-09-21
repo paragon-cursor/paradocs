@@ -1,4 +1,4 @@
-# ParaDOCS .  Cursor Team Marketplace
+# ParaDOCS · Cursor Team Marketplace
 
 ParaDOCS is a Cursor plugin for Paragon technical Markdown authoring across teams. It ships the **paragon-tech-docs** skill as the primary way to write Paragon technical documentation, plus thin rules that reinforce structure, voice, and quality.
 
@@ -6,8 +6,8 @@ Repository: [github.com/paragon-cursor/paradocs](https://github.com/paragon-curs
 
 ## What you get
 
-- **`paragon-tech-docs` skill** .  primary guidance for planning, drafting, and editing Paragon technical Markdown: audience-aware **Overview**, published Paragon tone of voice, UK English, Overview-first structure, security-aware examples, and numbered procedures.
-- **ParaDOCS rules** .  thin always-on seatbelts for Markdown style and stale-content trims; scoped rules where a guide path needs them.
+- **`paragon-tech-docs` skill** — primary guidance for planning, drafting, and editing Paragon technical Markdown: audience-aware **Overview**, published Paragon tone of voice, UK English, Overview-first structure, security-aware examples, and numbered procedures.
+- **ParaDOCS rules** — thin always-on seatbelts for Markdown style and stale-content trims; scoped rules where a guide path needs them.
 - **Team Marketplace packaging** with the ParaDOCS logo and metadata.
 
 ## Prerequisites
@@ -19,7 +19,7 @@ Repository: [github.com/paragon-cursor/paradocs](https://github.com/paragon-curs
 1. Open Cursor team settings and go to **Team Marketplace**.
 2. Find **ParaDOCS** in the Paragon marketplace and enable it for yourself or **Everyone** in the team.
 3. Choose **Reload Window** so rules and the skill load.
-4. Ask the agent to draft or edit technical documentation .  the **paragon-tech-docs** skill applies automatically when the work matches its description.
+4. Ask the agent to draft or edit technical documentation — the **paragon-tech-docs** skill applies automatically when the work matches its description.
 
 ## Example agent prompts
 
@@ -29,21 +29,23 @@ Repository: [github.com/paragon-cursor/paradocs](https://github.com/paragon-curs
 
 ## Repository layout
 
-- `.cursor-plugin/` .  plugin and marketplace manifests.
-- `rules/` .  Cursor rules for documentation authoring.
-- `skills/paragon-tech-docs/` .  the primary technical documentation skill.
-- `docs/` .  plugin references and style guides.
-- `engine/`, `src/convert/`, `dist/` .  convert MCP source and prebuilds (maintainer-only; not part of the Team Marketplace install).
+- `.cursor-plugin/` — plugin and marketplace manifests.
+- `rules/` — Cursor rules for documentation authoring.
+- `skills/paragon-tech-docs/` — the primary technical documentation skill.
+- `docs/` — plugin references and style guides.
+- `assets/` — plugin logo (`avatar.png`).
+- `scripts/` — maintainer helpers (for example syncing the bundled style guide from `cursor-test`).
 
-## Build (maintainers)
+## Maintainers
+
+To refresh the bundled copy of `docs/Paragon_Markdown_Style_Rules.md` from the canonical `cursor-test` source:
 
 ```bash
-npm install
-npm run build
+python scripts/sync_paragon_markdown_style.py
 ```
 
-Produces `dist/index.js` (convert MCP) and `dist/ui/mcp-app.html` (Apps chrome) when building convert locally. Optional Paragon Knowledge server: `npm run build:server:knowledge` → `dist/knowledge/index.js` (requires corpus env vars; not shipped by default).
+Use `--check` to fail on drift without writing. See [docs/ParaDOCS-Plugin-Overview.md](docs/ParaDOCS-Plugin-Overview.md) for plugin packaging notes.
 
 ## Scope
 
-The default Team Marketplace install is **skills + rules** only. Convert and optional Paragon Knowledge code remain in the repository for separate pilots .  see [docs/ParaDOCS-Plugin-Overview.md](docs/ParaDOCS-Plugin-Overview.md) and [docs/Paragon-Knowledge-MCP-Overview.md](docs/Paragon-Knowledge-MCP-Overview.md).
+The Team Marketplace install is **skills + rules** only. See [docs/ParaDOCS-Plugin-Overview.md](docs/ParaDOCS-Plugin-Overview.md).

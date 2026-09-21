@@ -28,22 +28,14 @@ if (Test-Path $linkPath) {
 
 New-Item -ItemType Directory -Force -Path $linkPath | Out-Null
 
-# Plugin payload only (skip bulky / irrelevant trees).
+# Plugin payload only (skills + rules + docs).
 $include = @(
   ".cursor-plugin",
   "assets",
   "docs",
   "rules",
   "skills",
-  "scripts",
-  "src",
-  "ui",
-  "engine",
-  "dist",
-  "package.json",
-  "package-lock.json",
-  "tsconfig.json",
-  ".env.local"
+  "scripts"
 )
 
 foreach ($name in $include) {
@@ -65,29 +57,9 @@ if ($overlayOnly) {
   Write-Host "Overlay refresh complete (folder was locked)."
 }
 
-Push-Location $linkPath
-try {
-  # NODE_ENV=production skips Vite; force devDeps when a rebuild is needed.
-  $prevNodeEnv = $env:NODE_ENV
-  $env:NODE_ENV = "development"
-  try {
-    npm install --include=dev
-    if (-not (Test-Path (Join-Path $linkPath "dist\ui\mcp-app.html"))) {
-      npm run build
-    }
-  } finally {
-    if ($null -eq $prevNodeEnv) { Remove-Item Env:NODE_ENV -ErrorAction SilentlyContinue }
-    else { $env:NODE_ENV = $prevNodeEnv }
-  }
-} finally {
-  Pop-Location
-}
-
 Write-Host "Installed local plugin (copy):"
 Write-Host "  $linkPath"
 Write-Host "  (source repo: $repoRoot)"
 Write-Host ""
 Write-Host "Next:"
 Write-Host "  1. Reload Window so ParaDOCS rules and the paragon-tech-docs skill load."
-Write-Host "  2. Keep any User MCP 'paragon-knowledge' / old 'paradocs' / 'paragon-docs' entry disabled to avoid duplicates."
-
