@@ -6,15 +6,15 @@
   },
   "metadata": {
     "description": "ParaDOCS is skills and rules for Paragon technical Markdown authoring in Cursor. The paragon-tech-docs skill is the primary way to write Paragon technical documentation; bundled rules reinforce structure, style, and quality. Prerequisites: Paragon team sign-in with Team Marketplace access. Enable from Team Marketplace and Reload Window. Convert MCP may return in a later release.",
-    "version": "0.3.1"
+    "version": "0.3.2"
   },
   "plugins": [
     {
       "name": "paradocs",
       "source": "./",
       "description": "ParaDOCS is skills and rules for Paragon technical Markdown authoring in Cursor. The paragon-tech-docs skill is the primary way to write Paragon technical documentation; bundled rules reinforce structure, style, and quality. Prerequisites: signed into the Paragon team with Team Marketplace access. Enable ParaDOCS from Team Marketplace and choose Reload Window. Convert MCP may return in a later release.",
-      "version": "0.3.1",
-      "logo": "assets/avatar.png",
+      "version": "0.3.2",
+      "logo": "https://raw.githubusercontent.com/paragon-cursor/paradocs/main/assets/avatar.png",
       "keywords": [
         "paragon",
         "paradocs",
