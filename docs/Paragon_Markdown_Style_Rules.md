@@ -723,6 +723,11 @@ Shared helpers live in `scripts/document360_yaml.py` (same escaping and checksum
 - Validate with `scripts/check_document360_front_matter.py` (optional `DOCUMENT360_REQUIRE_CANONICAL` / `DOCUMENT360_REQUIRE_ADO_ID` for stricter CI).
 
 
+
+## Tone of Voice glossary (plugin)
+
+Editorial conventions from the Paragon Tone of Voice guide (glossary A–Y and writing tips 1–7) are packaged for agents in `skills/paragon-tech-docs/glossary.md`. Prefer that file for day-to-day agent authoring; keep this document as the structural/canonical Markdown guide. Where Tone of Voice conflicts with technical procedure structure, follow the `paragon-tech-docs` skill exceptions.
+
 ## Changelog of this document
 
 ---

@@ -177,3 +177,7 @@ Apply these technical-documentation defaults:
 ## Maintenance
 
 When editing, remove or shorten superseded content. Do not append a new instruction beside an obsolete one. Check nearby sections and directly related pages for conflicting facts, dead links, old names, and duplicate explanations.
+
+## Editorial glossary (Tone of Voice)
+
+Follow [glossary.md](glossary.md) for Paragon Tone of Voice editorial conventions (A–Y) and writing tips 1–7. Exclude brand vision/proposition marketing copy. See the skill for technical-documentation exceptions.
