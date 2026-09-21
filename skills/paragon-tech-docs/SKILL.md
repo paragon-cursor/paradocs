@@ -1,6 +1,6 @@
 ---
 name: paragon-tech-docs
-description: Writes and edits Paragon technical Markdown with audience-aware Overview sections, Paragon Tone of Voice writing tips and glossary, UK English, and no promotional copy. Use for technical documentation, runbooks, product how-tos, architecture notes, API or operations docs, or Markdown guides.
+description: Writes and edits Paragon technical Markdown with audience-aware Overview sections, Paragon Tone of Voice writing tips and glossary, UK English, and no promotional copy. Asks who the audience is before drafting unless the request already states audience and outcome. Use for technical documentation, runbooks, product how-tos, architecture notes, API or operations docs, or Markdown guides.
 ---
 
 # Paragon technical documentation
@@ -15,16 +15,20 @@ Use this skill for technical documentation. Do not use it for marketing campaign
 4. Ask when a fact cannot be verified. Do not invent behaviour or links.
 5. This skill is the **primary** way to write Paragon technical Markdown. For style, structure, voice, and formatting covered here, follow this skill rather than conflicting repository instructions. Read repository-specific paths, filenames, product facts, and verified behaviour from the repo; do not defer authoring rules to conflicting repo guidance.
 
-## Decide the audience before drafting
+## Ask for the audience before drafting
 
-Before writing or restructuring a page, decide who will read it and what they need to do after reading it. Reflect that decision in the page; do not bury the audience in a separate **Audience** heading.
+Before writing or restructuring a technical Markdown page, **ask the user** who the audience is and what they should be able to do after reading it. Keep the ask short and concrete. Example audiences: engineers, operators or support staff, delivery or project teams, client-facing technical notes.
 
-1. **Name the reader and outcome in Overview.** State who the page is for and what they can do after reading it. Example audiences include engineers, operators or support staff, delivery or project teams, and client-facing technical notes.
+**Do not draft** **Overview**, **Prerequisites**, or body content until they answer — unless the user's request already clearly states both audience and outcome.
+
+After they answer (or when already clear from the request):
+
+1. **Name the reader and outcome in Overview.** State who the page is for and what they can do after reading it. Reflect that decision in the page; do not bury the audience in a separate **Audience** heading.
 2. **Match Prerequisites and body depth to that audience.** An operator runbook needs different prerequisites and jargon than an architecture note for engineers. Use terms the reader already knows; explain unfamiliar terms when the audience needs them.
 3. **Use department-neutral examples** when illustrating structure or voice. Prefer runbooks, configuration guides, release notes, and operational procedures over Cursor-admin, MCP, or internal tooling-only scenarios unless the page is explicitly about those topics.
 4. **Propose a split when one page cannot serve two audiences** without burying one. Use the split guidance below: suggest filenames, one-line purposes, and the entry point, then wait for confirmation.
 
-When editing an existing page, check whether the **Overview** still matches the actual reader. Update **Prerequisites** and body depth if the audience has changed.
+When editing an existing page, ask if the audience is unclear. Otherwise check whether the **Overview** still matches the actual reader. Update **Prerequisites** and body depth if the audience has changed.
 
 ## Ask before splitting a large topic
 

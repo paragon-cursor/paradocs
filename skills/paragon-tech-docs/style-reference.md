@@ -6,13 +6,14 @@ This reference adapts the documentation-relevant parts of `Paragon_Markdown_Styl
 
 ## Audience
 
-Before drafting:
+Before drafting, ask the user who the audience is and what they should be able to do after reading — unless the request already states both. Do not draft **Overview**, **Prerequisites**, or body until they answer.
 
-1. Decide who will read the page and what they will do after reading it.
-2. Put the reader and outcome in **Overview** (no separate **Audience** H2).
-3. Match **Prerequisites**, depth, and jargon to that reader (engineer, operator, delivery, client-facing technical note, and so on).
-4. Propose a split when one page would bury one audience; each split file gets its own **Overview**.
-5. Use department-neutral examples unless the page is explicitly about a specific tool or team.
+After they answer (or when already clear):
+
+1. Put the reader and outcome in **Overview** (no separate **Audience** H2).
+2. Match **Prerequisites**, depth, and jargon to that reader (engineer, operator, delivery, client-facing technical note, and so on).
+3. Propose a split when one page would bury one audience; each split file gets its own **Overview**.
+4. Use department-neutral examples unless the page is explicitly about a specific tool or team.
 
 ## Structure
 
