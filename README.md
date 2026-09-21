@@ -1,16 +1,14 @@
 # ParaDOCS — Cursor Team Marketplace
 
-ParaDOCS is a Cursor plugin for Paragon technical Markdown authoring. It ships the **paragon-tech-docs** skill as the primary way to write Paragon technical documentation, plus reusable rules for structure, style, and quality.
+ParaDOCS is a Cursor plugin for Paragon technical Markdown authoring across teams. It ships the **paragon-tech-docs** skill as the primary way to write Paragon technical documentation, plus thin rules that reinforce structure, voice, and quality.
 
 Repository: [github.com/paragon-cursor/paradocs](https://github.com/paragon-cursor/paradocs)
 
 ## What you get
 
-- **`paragon-tech-docs` skill** — primary guidance for planning, drafting, and editing Paragon technical Markdown (Overview-first structure, UK English, published tone, security-aware examples).
-- **ParaDOCS rules** — always-on reinforcement for Markdown style, terminology, stale-content trims, and documentation quality.
+- **`paragon-tech-docs` skill** — primary guidance for planning, drafting, and editing Paragon technical Markdown: audience-aware **Overview**, published Paragon tone of voice, UK English, Overview-first structure, security-aware examples, and numbered procedures.
+- **ParaDOCS rules** — thin always-on seatbelts for Markdown style and stale-content trims; scoped rules where a guide path needs them.
 - **Team Marketplace packaging** with the ParaDOCS logo and metadata.
-
-Convert MCP is not part of this release; it may return in a later version. Convert engine source remains in the repository for maintainers but is not wired into the Team Marketplace install.
 
 ## Prerequisites
 
@@ -26,7 +24,7 @@ Convert MCP is not part of this release; it may return in a later version. Conve
 ## Example agent prompts
 
 - “Draft a runbook for webhook authentication using our technical documentation style.”
-- “Review this Markdown page for Overview-first structure and stale content.”
+- “Review this Markdown page for audience clarity, Overview-first structure, and stale content.”
 - “Split this large topic into focused guides and propose filenames before drafting.”
 
 ## Repository layout
@@ -35,7 +33,7 @@ Convert MCP is not part of this release; it may return in a later version. Conve
 - `rules/` — Cursor rules for documentation authoring.
 - `skills/paragon-tech-docs/` — the primary technical documentation skill.
 - `docs/` — plugin references and style guides.
-- `engine/`, `src/convert/`, `dist/` — convert MCP source and prebuilds (not shipped by the Team Marketplace plugin in 0.3.0).
+- `engine/`, `src/convert/`, `dist/` — convert MCP source and prebuilds (maintainer-only; not part of the Team Marketplace install).
 
 ## Build (maintainers)
 
@@ -48,4 +46,4 @@ Produces `dist/index.js` (convert MCP) and `dist/ui/mcp-app.html` (Apps chrome) 
 
 ## Scope
 
-The default Team Marketplace install is **skills + rules** only. Convert MCP and optional Paragon Knowledge read/search code remain in the repository for separate pilots — see [docs/ParaDOCS-Plugin-Overview.md](docs/ParaDOCS-Plugin-Overview.md) and [docs/Paragon-Knowledge-MCP-Overview.md](docs/Paragon-Knowledge-MCP-Overview.md).
+The default Team Marketplace install is **skills + rules** only. Convert and optional Paragon Knowledge code remain in the repository for separate pilots — see [docs/ParaDOCS-Plugin-Overview.md](docs/ParaDOCS-Plugin-Overview.md) and [docs/Paragon-Knowledge-MCP-Overview.md](docs/Paragon-Knowledge-MCP-Overview.md).

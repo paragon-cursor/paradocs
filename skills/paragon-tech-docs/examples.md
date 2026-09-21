@@ -4,6 +4,28 @@
 
 These examples show the main decisions in the `paragon-tech-docs` skill. Adapt the facts to the repository and verify commands, UI labels, names, and links before using them.
 
+## Name the audience in Overview
+
+Prefer an Overview that names the reader and outcome (no separate **Audience** H2):
+
+```markdown
+# Restore service from backup
+
+## Overview
+
+This runbook is for operators who need to restore a service from the latest approved backup. After following it, you will have validated the restored instance and returned it to normal traffic.
+```
+
+For a delivery audience:
+
+```markdown
+# Release checklist for payment service
+
+## Overview
+
+This checklist is for delivery leads preparing a production release. Use it to confirm prerequisites, sign-offs, and rollback steps before the change window.
+```
+
 ## Start a page
 
 Prefer:

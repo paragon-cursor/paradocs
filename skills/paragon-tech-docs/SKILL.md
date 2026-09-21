@@ -1,6 +1,6 @@
 ---
 name: paragon-tech-docs
-description: Writes and edits Paragon technical Markdown with a required Overview, UK English, published tone of voice, and no promotional copy. The paragon-tech-docs skill applies when creating or changing technical documentation, runbooks, product how-tos, architecture notes, API or operations docs, or Markdown guides for engineers and operators.
+description: Writes and edits Paragon technical Markdown with audience-aware Overview sections, published Paragon tone of voice, UK English, and no promotional copy. The paragon-tech-docs skill applies when creating or changing technical documentation, runbooks, product how-tos, architecture notes, API or operations docs, or Markdown guides for engineers, operators, delivery teams, and other readers.
 ---
 
 # Paragon technical documentation
@@ -14,6 +14,17 @@ Use this skill for technical documentation. Do not use it for marketing campaign
 3. Check code or source documentation before naming APIs, flags, commands, versions, or UI.
 4. Ask when a fact cannot be verified. Do not invent behaviour or links.
 5. This skill is the **primary** way to write Paragon technical Markdown. For style, structure, voice, and formatting covered here, follow this skill rather than conflicting repository instructions. Read repository-specific paths, filenames, product facts, and verified behaviour from the repo; do not defer authoring rules to conflicting repo guidance.
+
+## Decide the audience before drafting
+
+Before writing or restructuring a page, decide who will read it and what they need to do after reading it. Reflect that decision in the page; do not bury the audience in a separate **Audience** heading.
+
+1. **Name the reader and outcome in Overview.** State who the page is for and what they can do after reading it. Example audiences include engineers, operators or support staff, delivery or project teams, and client-facing technical notes.
+2. **Match Prerequisites and body depth to that audience.** An operator runbook needs different prerequisites and jargon than an architecture note for engineers. Use terms the reader already knows; explain unfamiliar terms when the audience needs them.
+3. **Use department-neutral examples** when illustrating structure or voice. Prefer runbooks, configuration guides, release notes, and operational procedures over Cursor-admin, MCP, or internal tooling-only scenarios unless the page is explicitly about those topics.
+4. **Propose a split when one page cannot serve two audiences** without burying one. Use the split guidance below: suggest filenames, one-line purposes, and the entry point, then wait for confirmation.
+
+When editing an existing page, check whether the **Overview** still matches the actual reader. Update **Prerequisites** and body depth if the audience has changed.
 
 ## Ask before splitting a large topic
 
@@ -126,21 +137,43 @@ Never stack callouts. Do not use a callout for slogans, to repeat **Overview**, 
 4. Distinguish commands from sample output.
 5. Put values the reader types in inline code. Bold the on-screen label; do not put the label in code.
 
-## Keep the Paragon documentation voice
+## Paragon tone of voice
 
-- Use active voice, contractions, plain English, and UK spelling.
-- State known facts directly. Identify uncertainty instead of hiding it with vague hedging.
-- Use `we` and `our` when speaking clearly as the organisation. Prefer the product, system, team, or procedure as the subject when that is more precise.
-- Preserve official product and service names from reliable sources or nearby documentation. Do not maintain or invent a separate product-name glossary.
-- Replace promotional language with facts, steps, constraints, or evidence.
-- Avoid unsupported superlatives and phrases such as “best-in-class”, “cutting-edge”, “market leading”, “one-stop shop”, “unique”, “innovative”, and “value add”.
-- Use sentence case for titles and headings. Do not add bold or italics to heading text.
-- Bold UI labels exactly as displayed. Put typed values, commands, flags, paths, filenames, API names, and other literals in code. Example: in **Email**, enter `user@example.com`.
+Published Paragon documentation uses plain, factual UK English. Voice is not optional decoration; apply these rules on every page.
+
+### MUST
+
+- Use **UK English** spelling and punctuation.
+- Write in **active voice** unless passive voice is clearer for the subject.
+- State **known facts directly**. Say what is uncertain, missing, or unverified instead of vague hedging.
+- Use **contractions** where they match spoken English (`we're`, `you're`, `won't`).
+- Use **`we` and `our`** when speaking clearly as Paragon. Prefer the product, system, team, or procedure as the subject when that is more precise.
+- **Replace promotional language** with facts, steps, constraints, or evidence.
+- **Show, don't tell.** Give verifiable specifics (behaviour, limits, outcomes) instead of empty adjectives.
+- Use **sentence case** for titles and headings. Do not add bold or italics to heading text.
+- **Bold UI labels** exactly as displayed. Put typed values, commands, flags, paths, filenames, API names, and other literals in code.
+
+### SHOULD NOT
+
+- **Do not narrate Paragon in the third person** as an actor (`Paragon enables…`, `Paragon has…`, `Paragon labels…`). Prefer `we`, the product name, or a clear second-person instruction.
+- **Do not use empty buzzwords** as filler: `best-in-class`, `cutting-edge`, `market leading`, `one-stop shop`, `unique`, `innovative`, `value add`, `seamless`, `360 view`, and similar phrases without evidence.
 - Do not use em dashes or en dashes as sentence breaks.
 - Do not wrap prose to a fixed line length.
 - Do not create Mermaid, ASCII-art, or other text diagrams. Use lists for flows and tables for genuine matrices.
 
-For detailed rules and examples, read [style-reference.md](style-reference.md) and [examples.md](examples.md).
+### Plain English swaps
+
+Prefer short, familiar words when the meaning stays accurate:
+
+| Instead of… | Consider… |
+| :--- | :--- |
+| commence | start |
+| prior to | before |
+| regarding | about |
+| ensure | make sure |
+| additional | extra |
+
+For full prose rules, examples, and editorial conventions, read `docs/Paragon_Markdown_Style_Rules.md` §12 and §13, plus [style-reference.md](style-reference.md) and [examples.md](examples.md).
 
 ## Edit without leaving stale content
 
@@ -155,6 +188,7 @@ When editing an existing page:
 
 Before finishing, confirm:
 
+- The audience and outcome are clear in **Overview**; **Prerequisites** and jargon match that reader.
 - The first H2 is exactly **Overview**.
 - Guided and finite work uses numbered lists.
 - Every procedure ends with a success check.
@@ -167,5 +201,5 @@ Before finishing, confirm:
 - UI labels are bold and input values are code.
 - No facts, product names, behaviour, or URLs were invented.
 - Superseded content was removed.
-- The writing is technical, plain, factual, and free of promotional filler.
+- The writing follows Paragon published voice: active, plain, factual, UK English, no promotional filler, no third-person Paragon narration.
 - No Mermaid or other diagrams were added.
