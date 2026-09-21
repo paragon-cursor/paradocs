@@ -8,7 +8,7 @@ ParaDOCS is a Cursor plugin for Paragon technical Markdown authoring across team
 
 ## Included
 
-- **`skills/paragon-tech-docs/`** — primary skill for guided technical documentation authoring: decide the audience before drafting, name the reader and outcome in **Overview**, published Paragon tone of voice, numbered procedures, UK English, and security-aware examples.
+- **`skills/paragon-tech-docs/`** — primary skill for guided technical documentation authoring: ask for the audience before drafting, name the reader and outcome in **Overview**, published Paragon tone of voice, numbered procedures, UK English, and security-aware examples.
 - **`rules/`** — thin seatbelts for Markdown style and stale-content trims; path-scoped rules where a guide needs them (for example polite user prohibitions in user/admin guides).
 - **`.cursor-plugin/`** manifests and **`assets/avatar.png`**.
 
@@ -37,6 +37,10 @@ python scripts/sync_paragon_markdown_style.py
 For local testing without the Team Marketplace, run `scripts/install-local-plugin.ps1` (Windows) to copy the plugin payload into `~/.cursor/plugins/local/paradocs`.
 
 ## Changelog
+
+### 0.4.4
+
+- **paragon-tech-docs** requires asking the user for audience and outcome before drafting **Overview**, **Prerequisites**, or body, unless the request already states both.
 
 ### 0.4.3
 
