@@ -1,6 +1,9 @@
 ---
 description: Use "please" when telling users not to self-serve MCP, plugin, or security workarounds
-alwaysApply: true
+alwaysApply: false
+globs:
+  - user-guide/**/*.md
+  - admin-guide/**/*.md
 ---
 
 # Polite user prohibitions
@@ -21,3 +24,4 @@ Examples:
 
 - Mandatory **Admin Panel** team-rule text quoted verbatim in the Administration Guide.
 - Technical error messages, logs, or agent-to-agent/system instructions.
+- Documentation outside `user-guide/` and `admin-guide/` (runbooks, product docs, delivery notes, and other department guides).

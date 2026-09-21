@@ -4,6 +4,16 @@
 
 This reference adapts the documentation-relevant parts of `Paragon_Markdown_Style_Rules.md` into direct instructions for an agent. The section references point to the canonical guide for reviewers; the instructions here are sufficient for using the skill.
 
+## Audience
+
+Before drafting:
+
+1. Decide who will read the page and what they will do after reading it.
+2. Put the reader and outcome in **Overview** (no separate **Audience** H2).
+3. Match **Prerequisites**, depth, and jargon to that reader (engineer, operator, delivery, client-facing technical note, and so on).
+4. Propose a split when one page would bury one audience; each split file gets its own **Overview**.
+5. Use department-neutral examples unless the page is explicitly about a specific tool or team.
+
 ## Structure
 
 Follow these rules from canonical §§2 and 5:
@@ -96,27 +106,39 @@ Use callouts only when ordinary structure is not enough:
 - Avoid **Tip** when an `Optional:` numbered step is clearer.
 - Do not use host-specific syntax unless neighbouring pages already require it.
 
-## Voice and confidence
+## Paragon tone of voice
 
-Follow canonical §12:
+Follow canonical §12. These are the high-signal rules agents must not skip:
 
-- Prefer active voice.
-- State known information plainly.
-- Say what is uncertain, missing, or unverified.
-- Use natural contractions.
-- Use `we` and `our` only when the organisational voice is clear.
-- Prefer the product, system, team, or procedure as the subject when it is more precise.
+### MUST
+
+- UK English.
+- Active voice; state known facts plainly; identify uncertainty.
+- Natural contractions.
+- `we` / `our` when speaking as Paragon; keep the subject clear (product, system, team, or procedure when more precise).
 - Replace promotion with verifiable facts, steps, limits, and outcomes.
-- Use short, familiar words without making technical wording inaccurate.
-- Refer to people naturally and inclusively.
+- Show, don't tell: specifics over empty adjectives.
 
-Prefer:
+### SHOULD NOT
 
-- `start` to `commence`
-- `before` to `prior to`
-- `about` to `regarding`
-- `make sure` to `ensure` when it reads naturally
-- `extra` to `additional` when the meaning is unchanged
+- Third-person Paragon narration (`Paragon enables…`, `Paragon has…`, `Paragon labels…`).
+- Empty buzzwords: `best-in-class`, `cutting-edge`, `market leading`, `one-stop shop`, `unique`, `innovative`, `value add`, and similar filler without evidence.
+
+### Plain English
+
+Prefer short, familiar words without making technical wording inaccurate:
+
+| Instead of… | Consider… |
+| :--- | :--- |
+| commence | start |
+| prior to | before |
+| regarding | about |
+| ensure | make sure |
+| additional | extra |
+| advise | tell, explain |
+| determine | find out |
+
+Refer to people naturally and inclusively. See canonical §12 for full detail and §13 for editorial conventions.
 
 ## Editorial conventions
 
@@ -142,20 +164,6 @@ Apply the relevant parts of canonical §13:
 
 ## Security and privacy
 
-
-## Paragon deltas
-
-Apply these repository-specific requirements with the style above:
-
-- Read the target and a neighbouring section, consult relevant companion docs, match the host structure and tone, make surgical edits, and remove stale or duplicate content.
-- - Numbered chapter H2s use `N.M.` and a full stop except landing pages and descriptive runbooks. Keep anchors in sync. Never enforce fixed line lengths.
-  - - Never use em or en dashes as sentence breaks. Never stack NOTE, IMPORTANT, WARNING, TIP, or equivalent callouts.
-    - - Do not narrate Paragon as a third-person actor. Prefer passive or second-person voice. Proper names and scope labels are allowed.
-      - - Bold UI labels. Put typed values, paths, IDs, options, and commands in code. Use `<strong>` in ADO HTML.
-        - - Use Paragon Knowledge MCP before guessing Paragon Cursor, Technical Architecture, or Abbey View facts. Cite corpus paths and report unavailable titles or OCR gaps.
-          - - Changelog rows belong only in the owning product overview. Operational morning-check changes also update GitLab `cursor-test` Docs-as-Code §2, separate from verification.
-            - - Update existing `.devtool/features/` cards with UTC status, modified time, checks, and YAML; ask before new cards; do not mark OCR done before final OCR. Never run `git commit` or `git push` without explicit approval.
-              - 
 Apply these technical-documentation defaults:
 
 1. Use obviously fake people, customers, domains, identifiers, and credentials.

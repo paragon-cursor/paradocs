@@ -1,8 +1,6 @@
 # ParaDOCS plugin overview
 
-ParaDOCS is a Cursor plugin for Paragon technical Markdown authoring. It is distributed through the Paragon Team Marketplace and ships the **paragon-tech-docs** skill as the primary way to write Paragon technical documentation, plus bundled rules for structure, style, and quality.
-
-Convert MCP is not part of this release; it may return in a later version.
+ParaDOCS is a Cursor plugin for Paragon technical Markdown authoring across teams. It is distributed through the Paragon Team Marketplace and ships the **paragon-tech-docs** skill as the primary way to write Paragon technical documentation, plus thin bundled rules for structure, voice, and quality.
 
 ## Prerequisites
 
@@ -10,8 +8,8 @@ Convert MCP is not part of this release; it may return in a later version.
 
 ## Included
 
-- **`skills/paragon-tech-docs/`** — primary skill for guided technical documentation authoring (Overview-first pages, numbered procedures, UK English, published tone, security-aware examples).
-- **`rules/`** — structure, style, terminology, stale-content trims, and documentation quality.
+- **`skills/paragon-tech-docs/`** — primary skill for guided technical documentation authoring: decide the audience before drafting, name the reader and outcome in **Overview**, published Paragon tone of voice, numbered procedures, UK English, and security-aware examples.
+- **`rules/`** — thin seatbelts for Markdown style and stale-content trims; path-scoped rules where a guide needs them (for example polite user prohibitions in user/admin guides).
 - **`.cursor-plugin/`** manifests and **`assets/logo.png`**.
 
 ## Install from the Team Marketplace
@@ -24,21 +22,28 @@ Convert MCP is not part of this release; it may return in a later version.
 
 ## Authoring workflow
 
-Use **paragon-tech-docs** as the primary authority for how Paragon technical Markdown is written. Use the bundled rules for always-on reinforcement when creating or reviewing documentation: headings, terminology, trimming superseded content, and quality checks.
+Use **paragon-tech-docs** as the primary authority for how Paragon technical Markdown is written: audience, voice, structure, procedures, links, and security. Use the bundled rules for always-on reinforcement (style pointer, stale-content trims) when creating or reviewing documentation.
 
-## Convert MCP (not in 0.3.0)
+## Maintainer-only code (not in marketplace install)
 
-The repository retains convert MCP source under `engine/`, `src/convert/`, and prebuilt `dist/` for maintainers and future releases. It is **not** registered by the Team Marketplace plugin in version 0.3.0.
+The repository retains convert MCP source under `engine/`, `src/convert/`, and prebuilt `dist/` for maintainers and future releases. It is **not** registered by the Team Marketplace plugin.
 
-## Paragon Knowledge (optional)
-
-The repository retains an optional **Paragon Knowledge** read/search MCP (`src/knowledge/`, build with `npm run build:server:knowledge`). It is **not** registered by the Team Marketplace plugin and requires corpus path configuration. See [Paragon-Knowledge-MCP-Overview.md](Paragon-Knowledge-MCP-Overview.md).
+An optional **Paragon Knowledge** read/search MCP (`src/knowledge/`, build with `npm run build:server:knowledge`) also remains in-repo for separate pilots. It is **not** registered by the Team Marketplace plugin and requires corpus path configuration. See [Paragon-Knowledge-MCP-Overview.md](Paragon-Knowledge-MCP-Overview.md).
 
 ## Maintenance
 
-Keep `.cursor-plugin/plugin.json`, `.cursor-plugin/marketplace.json`, and this overview aligned. When convert MCP returns, run `npm run build` and commit updated `dist/` for marketplace consumers.
+Keep `.cursor-plugin/plugin.json`, `.cursor-plugin/marketplace.json`, and this overview aligned. Plugin/marketplace description fields are pending final product-owner copy for 0.4.0.
 
 ## Changelog
+
+### 0.4.0
+
+- **paragon-tech-docs** expanded: audience-first drafting (reader and outcome in **Overview**), promoted Paragon tone of voice section, department-neutral examples.
+- **style-reference.md** cleaned and aligned with audience and voice guidance.
+- **polite-user-prohibitions** scoped to `user-guide/` and `admin-guide/` paths only (not global).
+- **trim-stale-docs** stale rule references removed.
+- **paragon-markdown-style** thinned; skill remains primary authority.
+- Version bump to 0.4.0; marketplace description pending final copy.
 
 ### 0.3.0
 

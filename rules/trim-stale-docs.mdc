@@ -15,7 +15,7 @@ Before claiming a doc edit is done:
 
 1. **Scan the sections you touched** (and nearby related sections) for stale names, steps, settings, entry points, billing claims, Coming Soon promises, and duplicate explanations of the same fact.
 2. **Remove or shorten** material that the new or corrected facts replace. Prefer one clear current story over "also formerly…" piles unless a one-line formerly note helps reviewers.
-3. **Update companions** the same way: if page A drops a feature, pages that still describe it as current need the same trim (see `platform-docs-consistency.mdc`).
+3. **Update companion pages** the same way: if page A drops a feature, pages that still describe it as current need the same trim in the same task.
 4. **Say what you removed** when useful: Michu reports use **What we removed from our guides**; for human edits, the changelog "What changed" / "Why" should mention trims when they are material.
 
 ## Typical triggers
@@ -32,7 +32,7 @@ Before claiming a doc edit is done:
 
 | Actor | Role |
 | :--- | :--- |
-| **Michu** | Must trim when **upstream Cursor docs** drop or replace product behaviour we still document (`michu/automation-prompt.md`, `upstream-doc-drift.mdc`) |
+| **Michu** | Must trim when **upstream Cursor docs** drop or replace product behaviour we still document |
 | **Trundle** | Internal hygiene (links, facts, inventory); not a substitute for product-stale trims during authoring |
 | **Human / agent + ParaDOCS** | Same trim duty on every doc edit, including plugin and Technical Documentation operator docs |
 
