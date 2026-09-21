@@ -1,6 +1,6 @@
 ---
 name: paragon-tech-docs
-description: Writes and edits Paragon technical Markdown with audience-aware Overview sections, published Paragon tone of voice, UK English, and no promotional copy. The paragon-tech-docs skill applies when creating or changing technical documentation, runbooks, product how-tos, architecture notes, API or operations docs, or Markdown guides for engineers, operators, delivery teams, and other readers.
+description: Writes and edits Paragon technical Markdown with audience-aware Overview sections, Paragon Tone of Voice writing tips and glossary, UK English, and no promotional copy. Use for technical documentation, runbooks, product how-tos, architecture notes, API or operations docs, or Markdown guides.
 ---
 
 # Paragon technical documentation
@@ -203,3 +203,15 @@ Before finishing, confirm:
 - Superseded content was removed.
 - The writing follows Paragon published voice: active, plain, factual, UK English, no promotional filler, no third-person Paragon narration.
 - No Mermaid or other diagrams were added.
+
+## Paragon Tone of Voice glossary
+
+Follow [glossary.md](glossary.md) for editorial conventions and writing tips from Paragon Tone of Voice. Marketing vision/proposition pages are out of scope.
+
+### Technical documentation exceptions
+
+When Tone of Voice conflicts with technical structure in this skill, **this skill wins**:
+
+1. Numbered procedures may use full sentences and full stops.
+2. Procedures may have more than three steps (the "max three in a sentence" rule applies to comma-separated prose lists).
+3. Product, UI, and code identifiers stay in code spans or bold UI labels as defined above.
