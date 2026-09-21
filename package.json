@@ -1,6 +1,6 @@
 {
   "name": "paradocs-mcp",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "private": true,
   "description": "ParaDOCS Cursor plugin (skills + rules) and in-repo convert MCP source for maintainers.",
   "type": "module",
