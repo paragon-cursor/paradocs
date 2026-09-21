@@ -5,14 +5,14 @@
     "email": "gareth.howells@paragon-cc.co.uk"
   },
   "metadata": {
-    "description": "TODO: Replace with final product-owner description. Temporary: ParaDOCS ships the paragon-tech-docs skill (primary) and thin rules for Paragon technical Markdown — audience-aware Overview, published voice, structure, and stale-content trims.",
+    "description": "ParaDOCS helps anyone at Paragon write technical documentation in Markdown: product guides, runbooks, how-tos, and architecture notes. It applies Paragon's style and tone of voice, puts the reader in the Overview, and keeps structure consistent across teams. In Cursor, enable ParaDOCS from Team Marketplace, then ask the agent to write or edit a doc \u2014 it uses the paragon-tech-docs skill automatically.",
     "version": "0.4.0"
   },
   "plugins": [
     {
       "name": "paradocs",
       "source": "./",
-      "description": "TODO: Replace with final product-owner description. Temporary: ParaDOCS ships the paragon-tech-docs skill (primary) and thin rules for Paragon technical Markdown — audience-aware Overview, published voice, structure, and stale-content trims.",
+      "description": "ParaDOCS helps anyone at Paragon write technical documentation in Markdown: product guides, runbooks, how-tos, and architecture notes. It applies Paragon's style and tone of voice, puts the reader in the Overview, and keeps structure consistent across teams. In Cursor, enable ParaDOCS from Team Marketplace, then ask the agent to write or edit a doc \u2014 it uses the paragon-tech-docs skill automatically.",
       "version": "0.4.0",
       "logo": "https://raw.githubusercontent.com/paragon-cursor/paradocs/main/assets/avatar.png",
       "keywords": [
