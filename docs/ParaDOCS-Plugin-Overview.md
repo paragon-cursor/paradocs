@@ -15,10 +15,11 @@ ParaDOCS is a Cursor plugin for Paragon technical Markdown authoring across team
 ## Install from the Team Marketplace
 
 1. Open Cursor team settings and go to **Team Marketplace**.
-2. Add or select the Paragon marketplace sourced from `https://github.com/paragon-cursor/paradocs`.
-3. Find **ParaDOCS** and enable it for yourself or **Everyone** in the Paragon team.
-4. Choose **Reload Window** so rules and the skill load.
-5. Ask the agent to draft or edit technical documentation — the **paragon-tech-docs** skill applies when the task matches its description.
+2. Find **ParaDOCS** in the Paragon marketplace and enable it for yourself or **Everyone** in the Paragon team.
+3. Choose **Reload Window** so rules and the skill load.
+4. Ask the agent to draft or edit technical documentation — the **paragon-tech-docs** skill applies when the task matches its description.
+
+Do not browse github.com to install ParaDOCS. The private GitHub distribution mirror (`paragon-cursor/paradocs`) is for maintainers and the Cursor GitHub App only.
 
 ## Authoring workflow
 
@@ -37,6 +38,12 @@ python scripts/sync_paragon_markdown_style.py
 For local testing without the Team Marketplace, run `scripts/install-local-plugin.ps1` (Windows) to copy the plugin payload into `~/.cursor/plugins/local/paradocs`.
 
 ## Changelog
+
+### 0.4.5
+
+- GitHub distribution mirror is **private**; Team Marketplace reads it via the Cursor GitHub App.
+- Plugin and marketplace logos use relative `assets/avatar.png` (not `raw.githubusercontent.com`).
+- Install docs point to Team Marketplace only; removed end-user GitHub URLs.
 
 ### 0.4.4
 

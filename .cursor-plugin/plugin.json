@@ -1,14 +1,14 @@
 {
   "name": "paradocs",
   "displayName": "ParaDOCS",
-  "version": "0.4.4",
+  "version": "0.4.5",
   "description": "ParaDOCS helps anyone at Paragon write technical documentation in Markdown: product guides, runbooks, how-tos, and architecture notes. It applies Paragon's style and tone of voice, puts the reader in the Overview, and keeps structure consistent across teams. In Cursor, enable ParaDOCS from Team Marketplace, then ask the agent to write or edit a doc. It uses the paragon-tech-docs skill automatically.",
   "author": {
     "name": "Paragon",
     "email": "gareth.howells@paragon-cc.co.uk"
   },
   "repository": "https://github.com/paragon-cursor/paradocs",
-  "logo": "https://raw.githubusercontent.com/paragon-cursor/paradocs/main/assets/avatar.png",
+  "logo": "assets/avatar.png",
   "keywords": [
     "paragon",
     "paradocs",

@@ -2,7 +2,7 @@
 
 ParaDOCS is a Cursor plugin for Paragon technical Markdown authoring across teams. It ships the **paragon-tech-docs** skill as the primary way to write Paragon technical documentation, plus thin rules that reinforce structure, voice, and quality.
 
-Canonical source: [GitLab `cursor-test` / `paradocs/`](https://gitlab.com/gareth.howells778/cursor-test/-/tree/main/paradocs). Team Marketplace distribution: [github.com/paragon-cursor/paradocs](https://github.com/paragon-cursor/paradocs).
+Canonical source: [GitLab `cursor-test` / `paradocs/`](https://gitlab.com/gareth.howells778/cursor-test/-/tree/main/paradocs). Team Marketplace distribution is published to the private GitHub mirror `paragon-cursor/paradocs` for the Cursor GitHub App and maintainers only; end users install from **Team Marketplace**.
 
 ## What you get
 
@@ -21,6 +21,8 @@ Canonical source: [GitLab `cursor-test` / `paradocs/`](https://gitlab.com/gareth
 3. Choose **Reload Window** so rules and the skill load.
 4. Ask the agent to draft or edit technical documentation — the **paragon-tech-docs** skill applies automatically when the work matches its description.
 
+Do not browse github.com to install ParaDOCS. The private distribution mirror is for maintainers and the Cursor GitHub App only.
+
 ## Example agent prompts
 
 - “Draft a runbook for webhook authentication using our technical documentation style.”
@@ -38,7 +40,7 @@ Canonical source: [GitLab `cursor-test` / `paradocs/`](https://gitlab.com/gareth
 
 ## Maintainers
 
-Edit this plugin in GitLab `cursor-test` under `paradocs/`. GitLab CI publishes to GitHub for the Team Marketplace (see `MIRROR.md` in the GitLab tree).
+Edit this plugin in GitLab `cursor-test` under `paradocs/`. GitLab CI publishes to the private GitHub distribution mirror for Team Marketplace (see `MIRROR.md` in the GitLab tree).
 
 To refresh the bundled copy of `docs/Paragon_Markdown_Style_Rules.md` from the repo-root style guide in `cursor-test`:
 
