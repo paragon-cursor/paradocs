@@ -185,7 +185,7 @@ Optional author attribution under the title is allowed; revision history often m
 ### 2.1. Thematic breaks (horizontal rules)
 
 - **Internal** repository guides (`README.md`, `CONTRIBUTING.md`,
-  `docs/ParaDOCS/ParaDOCS_User_Guide.md`, `docs/Repo_Quickstart.md`, this file,
+  this file, and similar maintainer-facing markdown. The ParaDOCS terminal user guide lives in the Document360 repository at `paradocs/docs/ParaDOCS/ParaDOCS_User_Guide.md`,
   and similar maintainer-facing markdown): you **SHOULD** insert a thematic
   break (`---` on its own line) **immediately after each `##` heading** (one
   blank line between the heading line and the `---` line is recommended), so
@@ -672,7 +672,8 @@ Markdown in this repository may be published or synced to Document360 (D360) as 
 
 These rules mirror `prepend_document360_front_matter` in `paradocs.py` (same keys, order, and double-quoted string escaping as `_yaml_double_quoted_string`).
 
-- Internal guides: `MARKDOWN_NO_DOCUMENT360_FRONT_MATTER` in `scripts/document360_yaml.py` lists repo-relative paths (`README.md`, `docs/Cursor-Docs-Changelog.md`, `docs/CONTRIBUTING.md`, this file, `docs/ParaDOCS/ParaDOCS_User_Guide.md`, `docs/Repo_Quickstart.md`, `docs/Cursor_Document360_MCP.md`, `scripts/README.md`) that **MUST NOT** contain a document360 YAML block in git. `sync_repo_document360_front_matter.py` strips leading `---` metadata there; `check_document360_front_matter.py` rejects it if present. `templates/doc-template.md` remains the canonical example with full YAML for copy-paste into new articles.
+- **ParaDOCS terminal app:** maintained in the Azure DevOps **Document360** repository under `paradocs/`. Internal guides there are listed in `paradocs/scripts/document360_yaml.py`.
+- **Cursor documentation (this plugin bundle):** follow each host repository's internal-guide policy; this file is bundled for authoring rules, not as the Document360 publish manifest.
 - All other `*.md` files: you **MUST** keep YAML front matter at the top, using the fullest field set ParaDOCS can emit (below). after meaningful body edits, run `python scripts/sync_repo_document360_front_matter.py` so `description`, `last_updated`, `source_checksum`, and optional `canonical_url` stay accurate. validate with `python scripts/check_document360_front_matter.py` before merge when you touch markdown.
 - In ParaDOCS (`settings.json`): keep `document360_front_matter_enabled` `true` and every `document360_include_*` field `true` so rips include title, slug, description, tags, visibility, created, last_updated, source_system, source_file, source_checksum, ado_id (when present), and canonical_url (when a canonical base URL is configured). names match `DEFAULT_SETTINGS` in `paradocs.py` (`document360_include_title`, …, `document360_include_canonical_url`).
 - `source_system` is `"paradocs"` when ParaDOCS generated the file; use `"repository"` when the file is maintained in git and front matter was produced (or refreshed) only by `sync_repo_document360_front_matter.py`.
@@ -719,7 +720,7 @@ Treat `canonical_url`, `slug`, and `description` as publish-facing for search an
 
 Shared helpers live in `scripts/document360_yaml.py` (same escaping and checksum rules as `paradocs.py`).
 
-- Refresh repo YAML with `scripts/sync_repo_document360_front_matter.py`.
+- Refresh ParaDOCS-compatible YAML on Document360 articles from `Document360/paradocs/` (`python scripts/sync_repo_document360_front_matter.py ../docs/...`).
 - Validate with `scripts/check_document360_front_matter.py` (optional `DOCUMENT360_REQUIRE_CANONICAL` / `DOCUMENT360_REQUIRE_ADO_ID` for stricter CI).
 
 

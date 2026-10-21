@@ -10,7 +10,7 @@ https://gitlab.com/gareth.howells778/cursor-test/-/tree/main/paradocs
 | :---- | :---- |
 | Canonical | GitLab `cursor-test` `main` / `paradocs/` |
 | Visibility | Private (Team Marketplace via Cursor GitHub App) |
-| Published from commit | `791343b3c9eedcf13c84600058697e83e5d24095` |
-| Published | 2026-09-22 (UTC) |
+| Published from commit | `ea376c83a6ed63a49a738e0f7c8d65b06e9768f4` |
+| Published | 2026-10-21 (UTC) |
 
 Edit on GitLab; GitLab CI job `publish_paradocs_to_github` publishes here. Do not edit this repository directly unless you are recovering from a failed publish.
