@@ -170,12 +170,12 @@ Published Paragon documentation uses plain, factual UK English. Voice is not opt
 Prefer short, familiar words when the meaning stays accurate:
 
 | Instead of… | Consider… |
-| :--- | :--- |
-| commence | start |
-| prior to | before |
-| regarding | about |
-| ensure | make sure |
-| additional | extra |
+| :---------: | :-------: |
+| commence    | start     |
+| prior to    | before    |
+| regarding   | about     |
+| ensure      | make sure |
+| additional  | extra     |
 
 For full prose rules, examples, and editorial conventions, read `docs/Paragon_Markdown_Style_Rules.md` §12 and §13, plus [style-reference.md](style-reference.md) and [examples.md](examples.md).
 

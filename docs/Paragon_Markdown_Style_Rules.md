@@ -3,13 +3,12 @@
 This document defines how we write and format Markdown for Paragon technical documentation: structure (headings, lists, code fences, and so on) and prose (plain English, punctuation, and terminology). It is the authoritative guide for contributors here.
 
 Numbered sections (§1–§16) are deliberate: cite them in PRs, issues, reviews, and chat so reviewers and authors mean the same rule without pasting long excerpts. Use the heading anchor links in this file when you need a stable URL (for example `#3-line-length`).
-
 ## Contents
 
 ---
 
-  - [How this relates to tooling:](#how-this-relates-to-tooling)
-  - [Syntax vs. prose](#syntax-vs-prose)
+- [How this relates to tooling](#how-this-relates-to-tooling)
+- [Syntax vs. prose](#syntax-vs-prose)
 - [How to read these rules](#how-to-read-these-rules)
 - [Goals](#goals)
 - [Minimum viable documentation](#minimum-viable-documentation)
@@ -86,7 +85,7 @@ Numbered sections (§1–§16) are deliberate: cite them in PRs, issues, reviews
   - [16.6 implementation reference](#166-implementation-reference)
 - [Changelog of this document](#changelog-of-this-document)
 
-### How this relates to tooling:
+### How this relates to tooling
 
 Structural rules align with practices exemplified by Google’s public [Markdown documentation guide][g-docguide].
 
@@ -100,8 +99,6 @@ CI workflows. Wrap prose for readability in review.
 
 Where automation conflicts with this document or with UK English spelling,
 follow this document and use judgment.
-
-
 ## How to read these rules
 
 ---
@@ -116,8 +113,6 @@ Where this repo uses automation and scripts, that is noted under
 [§14 Enforcement in this repository](#14-enforcement-in-this-repository).
 
 When you reference Paragon Markdown rules elsewhere, prefer § numbers or Anchors (`#section-anchor`) - they stay stable when wording inside a section changes slightly.
-
-
 ## Goals
 
 ---
@@ -127,8 +122,6 @@ You **SHOULD** balance all of the following:
 1. Source text is readable and portable.
 1. The Markdown corpus is maintainable over time and across teams.
 1. The syntax is simple and easy to remember.
-
-
 ## Minimum viable documentation
 
 ---
@@ -137,8 +130,6 @@ You **SHOULD** balance all of the following:
 - You **SHOULD** strongly prefer markdown to HTML for body content.
 - You **SHOULD** identify what documentation is actually needed (release docs, API docs, testing guidelines, and so on).
 - You **SHOULD** delete obsolete content frequently and in small batches.
-
-
 ## Review culture (“Better is better than best”)
 
 ---
@@ -156,8 +147,6 @@ Authors **SHOULD**:
 
 1. Avoid trivial arguments; concede and move on when reasonable.
 1. Use the “Better/Best” mindset so small improvements can ship often.
-
-
 ## 1. Capitalization (product names)
 
 ---
@@ -165,8 +154,6 @@ Authors **SHOULD**:
 - You **MUST** preserve official capitalization of product, tool, and binary names (for example `markdown` as a product name, not `markdown` in titles when referring to the product).
 - For titles and headings, you **SHOULD** use sentence-style capitalization
   where [Google’s capitalization guidance][dev-cap-head] applies.
-
-
 ## 2. Document layout
 
 ---
@@ -203,8 +190,6 @@ YAML front matter: the `---` lines that wrap YAML at the top of a file (§16) de
 Enforcement: review in PRs. Use a consistent marker when thematic breaks appear;
 ParaDOCS structural passes may still strip `---` inside ripped article
 bodies-do not confuse that behaviour with hand-authored internal guides above.
-
-
 ## 4. Trailing whitespace
 
 ---
@@ -214,8 +199,6 @@ bodies-do not confuse that behaviour with hand-authored internal guides above.
 - You **SHOULD** prefer blank lines (new paragraphs) over hard breaks when possible.
 
 Enforcement in this repository:** `.editorconfig` trims trailing whitespace on `*.md`.
-
-
 ## 5. Headings
 
 ---
@@ -259,8 +242,6 @@ When a heading’s title includes a section or chapter number in the source (out
 Rationale: the dot makes the section id unambiguous and matches common book/contract numbering; it also avoids confusion with year-first titles (`2024 review` is not confused with section `2024.`).
 
 Enforcement: review in PRs; ParaDOCS auto-number headings emits this form when enabled (`rip_auto_number_atx_headings`).
-
-
 ## 6. Lists
 
 ---
@@ -289,8 +270,6 @@ Enforcement in this repository: list marker and indentation checks are
 automated. Ordered-list style allows both lazy and explicit numbering. §3.3
 (procedures) is review-driven - automated checks do not detect
 “paragraph vs procedure”; cite §3.3 in PRs for how-to edits.
-
-
 ## 7. Code (inline and fenced)
 
 ---
@@ -311,8 +290,6 @@ automated. Ordered-list style allows both lazy and explicit numbering. §3.3
 
 Enforcement in this repository: fenced code language tags are checked by
 automation.
-
-
 ## 8. Links
 
 ---
@@ -353,8 +330,6 @@ Optional title (tooltip in many browsers), after the URL:
 Contrast: inline links put the URL in the paragraph - `[Google Markdown guide](https://google. github.io/…)` - which is fine for short targets; use reference-style when the URL is long or the same destination appears more than once.
 
 Examples in this repository: reference blocks at the end of `README.md`, `docs/CONTRIBUTING.md`, and at the bottom of this file.
-
-
 ## 9. Images
 
 ---
@@ -362,8 +337,6 @@ Examples in this repository: reference blocks at the end of `README.md`, `docs/C
 - You **SHOULD** use images sparingly; prefer simple screenshots when a picture is clearer than text.
 - You **MUST** provide meaningful alt text for accessibility.
 - For image syntax details, follow your host’s markdown (see for example [gitiles image syntax][gitiles-img]).
-
-
 ## 10. Tables
 
 ---
@@ -371,16 +344,12 @@ Examples in this repository: reference blocks at the end of `README.md`, `docs/C
 - You **SHOULD** use tables only when data is genuinely tabular (quickly scannable across rows and columns).
 - You **SHOULD** prefer lists when the content is really a list of items, not a matrix.
 - You **SHOULD** keep tables small and readable; use reference links in cells when URLs would make table rows unwieldy.
-
-
 ## 11. Markdown vs HTML
 
 ---
 
 - You **MUST** use standard markdown over raw HTML for content that markdown can express.
 - You **SHOULD** avoid “HTML hacks” that harm readability or portability of the corpus; every exception makes plain-text and third-party tooling less useful.
-
-
 ## 12. Paragon prose for documentation
 
 ---
@@ -452,8 +421,6 @@ You **SHOULD** prefer short, plain words. Examples:
 | Whilst          | While          |
 
 Use judgment in legal, contractual, or quoted material where a fixed phrase is required.
-
-
 ## 13. Editorial conventions
 
 ---
@@ -592,8 +559,6 @@ When writing a site address in full, include www. where that is the canonical fo
 
 - Financial years: 2022/23
 - Ranges: 2010–11
-
-
 ## 14. Enforcement in this repository
 
 ---
@@ -646,8 +611,6 @@ across the whole document, not one rule per §1.x bullet.
 | §2–§2 | Defaults (links, images, raw HTML, …) |  -  | Mostly defaults + judgment |
 | §12–§13 |  -  | Editorial review and style guide | UK spelling (§13.22) by judgment, not automated spell checkers |
 | §1 |  -  |  -  | `scripts/sync_repo_document360_front_matter.py`; `scripts/check_document360_front_matter.py` |
-
-
 ## 15. Sources and acknowledgements
 
 ---
@@ -655,8 +618,6 @@ across the whole document, not one rule per §1.x bullet.
 - Markdown structure and repository hygiene: derived from [Google’s markdown style guide][g-docguide] (creative commons attribution 4.0; see the footer on that page). paragon adopts these practices as our standard; the live google guide remains useful for extra examples.
 - Automated prose checks: [google developer documentation style guide][dev-style], implemented with repository writing checks and Paragon overlays.
 - Paragon-specific prose and editorial rules: consolidated from prior paragon technical writing practice and material previously published in this repo as `Paragon_Tone_of_Voice_Guidelines.md` (marketing- and channel-specific content was removed; this document keeps what applies to documentation).
-
-
 ## 16. Document360 publishing
 
 ---
@@ -723,12 +684,9 @@ Shared helpers live in `scripts/document360_yaml.py` (same escaping and checksum
 - Refresh ParaDOCS-compatible YAML on Document360 articles from `Document360/paradocs/` (`python scripts/sync_repo_document360_front_matter.py ../docs/...`).
 - Validate with `scripts/check_document360_front_matter.py` (optional `DOCUMENT360_REQUIRE_CANONICAL` / `DOCUMENT360_REQUIRE_ADO_ID` for stricter CI).
 
-
-
 ## Tone of Voice glossary (plugin)
 
 Editorial conventions from the Paragon Tone of Voice guide (glossary A–Y and writing tips 1–7) are packaged for agents in `skills/paragon-tech-docs/glossary.md`. Prefer that file for day-to-day agent authoring; keep this document as the structural/canonical Markdown guide. Where Tone of Voice conflicts with technical procedure structure, follow the `paragon-tech-docs` skill exceptions.
-
 ## Changelog of this document
 
 ---
@@ -741,8 +699,6 @@ Editorial conventions from the Paragon Tone of Voice guide (glossary A–Y and w
 | 2026-04-18 | Paragon Markdown style rules: Markdown structure (from Google’s public docguide), documentation prose and editorial conventions (consolidated from prior Paragon practice), repo tooling mapping; supersedes separate Google-rules and tone-of-voice Markdown files. |
 | 2026-04-19 | §2.1 revised: internal guides **SHOULD** use `---` between top-level `##`; customer-facing articles **SHOULD NOT** rely on decorative HRs. §1.3: bold for UI labels, company/product names, notice run-ins (`**`, not `__`); italics conventions (`_`, sparingly); normative **MUST**/**SHOULD**/**MAY** bold only in this rules file. §2.6 **MUST NOT** bold/italic in ATX headings. Earlier §2.1 note: ParaDOCS structural pass may strip `---` in ripped bodies. §2.2 table; `Paragon/HeadingNoBoldMarkup`. §2.1 reference links; §1.2 internal guides omit D360 YAML in Git; §3.3 procedural lists. |
 | 2026-04-20 | §2.1 clarified: internal guides **SHOULD** place `---` **after** each `##` (not before), with a blank line between the heading and the rule, so browser previews do not stack an H2 underline on a thematic break. |
-
-
 ## Appendix A. Reference quick sheet
 
 ---

@@ -46,6 +46,7 @@ Avoid an unlabelled introduction, a marketing claim, or another H2 before **Over
 Our innovative solution provides best-in-class protection.
 
 ## Introduction
+
 ```
 
 ## Guide a reader
@@ -149,10 +150,10 @@ Introduce a genuine comparison:
 
 Use these fields to configure signature validation.
 
-| Field | Required | Purpose |
-| :--- | :--- | :--- |
-| `WEBHOOK_SECRET` | Yes | Verifies the request signature |
-| `WEBHOOK_TOLERANCE_SECONDS` | No | Limits accepted clock drift |
+| Field                       | Required | Purpose                        |
+| :-------------------------: | :------: | :----------------------------: |
+| `WEBHOOK_SECRET`            | Yes      | Verifies the request signature |
+| `WEBHOOK_TOLERANCE_SECONDS` | No       | Limits accepted clock drift    |
 ```
 
 Do not put another table directly after it. Add a heading and explanatory prose, combine closely related columns, or split the reference into another file.

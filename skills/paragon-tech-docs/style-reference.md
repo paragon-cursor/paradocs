@@ -129,15 +129,15 @@ Follow canonical §12. These are the high-signal rules agents must not skip:
 
 Prefer short, familiar words without making technical wording inaccurate:
 
-| Instead of… | Consider… |
-| :--- | :--- |
-| commence | start |
-| prior to | before |
-| regarding | about |
-| ensure | make sure |
-| additional | extra |
-| advise | tell, explain |
-| determine | find out |
+| Instead of… | Consider…     |
+| :---------: | :-----------: |
+| commence    | start         |
+| prior to    | before        |
+| regarding   | about         |
+| ensure      | make sure     |
+| additional  | extra         |
+| advise      | tell, explain |
+| determine   | find out      |
 
 Refer to people naturally and inclusively. See canonical §12 for full detail and §13 for editorial conventions.
 
